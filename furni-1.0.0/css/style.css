@@ -30,6 +30,8 @@ a {
   a.more {
     font-weight: 600; }
 
+
+
 .custom-navbar {
   background: #3b5d50 !important;
   padding-top: 20px;
@@ -87,7 +89,7 @@ a {
     -ms-flex-direction: row;
     flex-direction: row; }
     @media (min-width: 768px) {
-      .custom-navbar .custom-navbar-cta {
+      .custom-navbar .custom-navbar-cta { 
         margin-left: 40px !important; } }
     .custom-navbar .custom-navbar-cta li {
       margin-left: 0px;
@@ -95,8 +97,33 @@ a {
       .custom-navbar .custom-navbar-cta li:first-child {
         margin-right: 20px; }
 
+        .contenedor{
+          display: flex;
+          justify-content: center;
+          column-gap: 5px;
+        }    
+        
+        .re4-remake{
+          width: 300px;
+          height: 450px;
+        }
+        
+        .hollow-knight{
+          width: 300px;
+          height: 450px;
+        }
+        
+        .gow-ragnarok{
+          width: 300px;
+          height: 450px;
+        }
+
+.mb-4{
+  font-size: 150%;
+}
 .hero {
-  background: #3b5d50;
+
+  background-color: #1a1a1a;
   padding: calc(4rem - 30px) 0 0rem 0; }
   @media (min-width: 768px) {
     .hero {
