@@ -33,7 +33,7 @@ a {
 
 
 .custom-navbar {
-  background: #3b5d50 !important;
+  background: #1166b0 !important;
   padding-top: 20px;
   padding-bottom: 20px; }
   .custom-navbar .navbar-brand {
@@ -103,19 +103,14 @@ a {
           column-gap: 5px;
         }    
         
-        .re4-remake{
+        .re4-remake , .hollow-knight, .gow-ragnarok{
           width: 300px;
           height: 450px;
         }
         
-        .hollow-knight{
+        .elder-ring, .the-last-of-us, .devil-may-cry{
           width: 300px;
-          height: 450px;
-        }
-        
-        .gow-ragnarok{
-          width: 300px;
-          height: 450px;
+          height: 350px;
         }
 
 .mb-4{
