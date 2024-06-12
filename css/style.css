@@ -191,8 +191,8 @@ a {
   padding: 12px 30px;
   border-radius: 30px;
   color: #ffffff;
-  background: #2f2f2f;
-  border-color: #2f2f2f; }
+  background: #3eaeea;
+  border-color: #3eaeea; }
   .btn:hover {
     color: #ffffff;
     background: #222222;
@@ -209,8 +209,8 @@ a {
       border-color: #314d43; }
   .btn.btn-secondary {
     color: #2f2f2f;
-    background: #f9bf29;
-    border-color: #f9bf29; }
+    background: #3eaeea;
+    border-color: #3eaeea; }
     .btn.btn-secondary:hover {
       background: #f8b810;
       border-color: #f8b810; }
