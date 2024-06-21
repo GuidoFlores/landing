@@ -14,10 +14,13 @@ let loaded = (eventLoaded) => {
 
         let nombreValue = myform.nombre.value.trim();
         let correoValue = myform.correo.value.trim();
+        let apellidoValue = myform.apellido.value.trim();
+        let ciudadValue = myform.ciudad.value.trim();
+
 
         // Validación del contenido del input 
 
-        if (nombreValue === '' || correoValue === '') {
+        if (nombreValue === '' || correoValue === '' || apellidoValue === '' || ciudadValue === '') {
 
             alert('por favor ingrese todos los campos')
 
@@ -30,7 +33,7 @@ let loaded = (eventLoaded) => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({'email': correoValue, 'nombre': nombreValue  })
+                body: JSON.stringify({'nombre': nombreValue, 'apellido': apellidoValue , 'email': correoValue , 'ciudad': ciudadValue    })
             });
 
             if(!respuesta.ok){
@@ -43,16 +46,6 @@ let loaded = (eventLoaded) => {
             alert('Hubo un problema al enviar los datos.');
         }
 
-        /*if(correoValue.length == 0){
-
-            correo.focus()
-
-            alert('Ingrese un correo válido')
-
-            return;
-        }*/
-
-        
         debugger;
         
 
@@ -72,22 +65,35 @@ async function obtenerDatos() {
     const datos = await respuesta.json();
     console.log(datos); // Procesar o mostrar los datos obtenidos
 
-    const tableBody = document.getElementById('tablebody');
-        for (const key in datos) {
-            if (datos.hasOwnProperty(key)) {
-                const obj = datos[key];
-                const categoria = obj.nombre
-                const conteo = obj.email
-                let template = `
-                    <tr>
-                        <td>${categoria}</td>
-                        <td>${conteo}</td>
-                    </tr>
-                `;
-                tableBody.innerHTML += template;
+    const ciudadCount = {};
+    for (const key in datos) {
+        if (datos.hasOwnProperty(key)) {
+            const obj = datos[key];
+            const ciudad = obj.ciudad;
+            if (ciudadCount[ciudad]) {
+                ciudadCount[ciudad]++;
+            } else {
+                ciudadCount[ciudad] = 1;
             }
         }
     }
+
+    const tableBody = document.getElementById('tablebody');
+    tableBody.innerHTML = '';
+
+    for (const ciudad in ciudadCount) {
+        if (ciudadCount.hasOwnProperty(ciudad)) {
+            const conteo = ciudadCount[ciudad];
+            let template = `
+                <tr>
+                    <td>${ciudad}</td>
+                    <td>${conteo}</td>
+                </tr>
+            `;
+            tableBody.innerHTML += template;
+        }
+    }
+}
 
 
 window.addEventListener("DOMContentLoaded", loaded);
