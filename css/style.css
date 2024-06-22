@@ -33,7 +33,7 @@ a {
 
 
 .custom-navbar {
-  background: #1166b0 !important;
+  background: #7309b9 !important;
   padding-top: 20px;
   padding-bottom: 20px; }
   .custom-navbar .navbar-brand {
@@ -316,7 +316,8 @@ a {
   .feature .icon {
     display: inline-block;
     position: relative;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-size: 40px; }
     .feature .icon:before {
       content: "";
       width: 33px;
@@ -441,12 +442,14 @@ a {
       z-index: -1; }
 
 .testimonial-section {
-  padding: 0; }
+  padding: 0;
+ }
 
 .testimonial-slider-wrap {
   position: relative; }
   .testimonial-slider-wrap .tns-inner {
-    padding-top: 0; }
+    padding-top: 0;
+   }
   .testimonial-slider-wrap .item .testimonial-block blockquote {
     font-size: 16px; }
     @media (min-width: 768px) {
